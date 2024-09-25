@@ -1,4 +1,4 @@
-# Fuzzer Web Golang
+# Fuzzer Web - Golang
 
 Fuzzer Web Golang é uma ferramenta de linha de comando para enumerar diretórios web usando técnicas de fuzzing. Ela permite fazer requisições HTTP simultâneas para um host, substituindo a palavra-chave `FUZZER` pelo nome de diretórios listados em um arquivo de texto, e filtrar os resultados por códigos de status HTTP e tamanhos de conteúdo específicos.
 
