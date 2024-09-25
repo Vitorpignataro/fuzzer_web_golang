@@ -52,11 +52,12 @@ go run main.go --threads 40 --host https://google.com.br/FUZZER --file arquivo.t
 - `--host` -> URL do site alvo, com a palavra-chave FUZZER sendo substituída pelos caminhos no arquivo de entrada.
 - `--file` -> Caminho para o arquivo de texto contendo os nomes dos diretórios a serem testados.
 - `--hdc` -> Códigos de status HTTP a serem ocultados (opcional).
+- `--hcl` -> Content lenght a serem ocultados (opcional).
 
 ## Exemplo de Uso
 ```bash
-go run main.go --threads 40 --host https://google.com.br/FUZZER --file arquivo.txt --hdc 404,301
+go run main.go --threads 40 --host https://google.com.br/FUZZER --file arquivo.txt --hdc 404,301 --hcl 5123,2211
 ```
 
-Nesse exemplo, a aplicação fará requisições simultâneas (usando 40 threads) para o host `https://google.com.br/`, substituindo a palavra `FUZZER` pelos diretórios listados no arquivo `arquivo.txt`. Os resultados com códigos de status 404 e 301 serão ocultados.
+Nesse exemplo, a aplicação fará requisições simultâneas (usando 40 threads) para o host `https://google.com.br/`, substituindo a palavra `FUZZER` pelos diretórios listados no arquivo `arquivo.txt`. Os resultados com códigos de status 404 e 301 e tamanho de resposta 5123 e 2211 serão ocultados.
 
